@@ -7,8 +7,8 @@
 
 import Apollo
 
-public enum SchemaConfiguration: Apollo.SchemaConfiguration {
-  public static func cacheKeyInfo(for type: Object, object: JSONObject) -> CacheKeyInfo? {
+enum SchemaConfiguration: Apollo.SchemaConfiguration {
+  static func cacheKeyInfo(for type: Object, object: JSONObject) -> CacheKeyInfo? {
     // Implement this function to configure cache key resolution for your schema types.
     return nil
   }

@@ -1,5 +1,5 @@
 {
-  "schemaNamespace" : "TG",
+  "schemaName" : "TG",
   "options" : {
     "cocoapodsCompatibleImportStatements" : true
   },
@@ -19,9 +19,9 @@
     "schemaTypes" : {
       "path" : "./TG",
       "moduleType" : {
-        "other" : {
-          "name" : "TG"
-        }
+          "embeddedInTarget": {
+              "name": "TG"
+          }
       }
     },
     "operations" : {

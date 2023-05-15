@@ -3,7 +3,7 @@
 
 import Apollo
 
-public extension Objects {
+public extension TG.Objects {
   static let Team = Object(
     typename: "Team",
     implementedInterfaces: []
