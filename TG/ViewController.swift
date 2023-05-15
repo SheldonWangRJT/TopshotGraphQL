@@ -13,16 +13,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let url = URL(string: "https://public-api.nbatopshot.com/graphql")
-        guard let url else { return }
-        let apolloClient = ApolloClient(url: url)
-        ApolloClient(networkTransport: <#T##NetworkTransport#>, store: <#T##ApolloStore#>)
-        
+                
         let query = TG.AllTeamsQuery()
-        apolloClient.fetch(query: query, cachePolicy: .returnCacheDataAndFetch) { result in
-            print(result)
-        }
+        NetworManager.shared.client?.fetch(query: query, resultHandler: { result in
+            switch result {
+            case .success(let results):
+                let allTeams = results.data?.allTeams
+                let allTeamsData = allTeams?.data.compactMap { $0 }
+                let allTeamsDataNames = allTeamsData?.map { $0.name }.compactMap { $0 } ?? []
+                debugPrint(allTeamsDataNames)
+            case .failure(let error):
+                debugPrint(error)
+            }
+        })
     }
 
     
