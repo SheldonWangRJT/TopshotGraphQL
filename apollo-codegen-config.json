@@ -1,0 +1,32 @@
+{
+  "schemaNamespace" : "TG",
+  "options" : {
+    "cocoapodsCompatibleImportStatements" : true
+  },
+  "input" : {
+    "operationSearchPaths" : [
+      "TG/GraphQL/Queries.graphql"
+    ],
+    "schemaSearchPaths" : [
+      "TG/GraphQL/schema.json"
+    ]
+  },
+  "output" : {
+    "testMocks" : {
+      "none" : {
+      }
+    },
+    "schemaTypes" : {
+      "path" : "./TG",
+      "moduleType" : {
+        "other" : {
+          "name" : "TG"
+        }
+      }
+    },
+    "operations" : {
+      "inSchemaModule" : {
+      }
+    }
+  }
+}
