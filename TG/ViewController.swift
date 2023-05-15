@@ -17,10 +17,11 @@ class ViewController: UIViewController {
         let url = URL(string: "https://public-api.nbatopshot.com/graphql")
         guard let url else { return }
         let apolloClient = ApolloClient(url: url)
+        ApolloClient(networkTransport: <#T##NetworkTransport#>, store: <#T##ApolloStore#>)
         
-        let query = AllTeamsQuery()
+        let query = TG.AllTeamsQuery()
         apolloClient.fetch(query: query, cachePolicy: .returnCacheDataAndFetch) { result in
-            
+            print(result)
         }
     }
 
