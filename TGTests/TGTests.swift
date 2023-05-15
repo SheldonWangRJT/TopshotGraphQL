@@ -1,14 +1,14 @@
 //
-//  TopShotGraphQLTests.swift
-//  TopShotGraphQLTests
+//  TGTests.swift
+//  TGTests
 //
 //  Created by Xiaodan Wang on 5/14/23.
 //
 
 import XCTest
-@testable import TopShotGraphQL
+@testable import TG
 
-final class TopShotGraphQLTests: XCTestCase {
+final class TGTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

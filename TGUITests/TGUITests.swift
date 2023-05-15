@@ -1,13 +1,13 @@
 //
-//  TopShotGraphQLUITests.swift
-//  TopShotGraphQLUITests
+//  TGUITests.swift
+//  TGUITests
 //
 //  Created by Xiaodan Wang on 5/14/23.
 //
 
 import XCTest
 
-final class TopShotGraphQLUITests: XCTestCase {
+final class TGUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

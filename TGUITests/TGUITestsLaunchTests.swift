@@ -1,13 +1,13 @@
 //
-//  TopShotGraphQLUITestsLaunchTests.swift
-//  TopShotGraphQLUITests
+//  TGUITestsLaunchTests.swift
+//  TGUITests
 //
 //  Created by Xiaodan Wang on 5/14/23.
 //
 
 import XCTest
 
-final class TopShotGraphQLUITestsLaunchTests: XCTestCase {
+final class TGUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

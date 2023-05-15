@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TopShotGraphQL
+//  TG
 //
 //  Created by Xiaodan Wang on 5/14/23.
 //
