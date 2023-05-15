@@ -1,0 +1,10 @@
+//
+//  Queries.swift
+//  TG
+//
+//  Created by Xiaodan Wang on 5/15/23.
+//
+
+type Query {
+    allTeams
+}
