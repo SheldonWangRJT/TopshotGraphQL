@@ -4,13 +4,13 @@
 @_exported import Apollo
 
 public extension TG {
-  class AllTeamsQuery: GraphQLQuery {
-    public static let operationName: String = "AllTeams"
+  class AllTeamsByLeaguesQuery: GraphQLQuery {
+    public static let operationName: String = "AllTeamsByLeagues"
     public static let document: Apollo.DocumentType = .notPersisted(
       definition: .init(
         #"""
-        query AllTeams {
-          allTeams {
+        query AllTeamsByLeagues($input: AllTeamsByLeaguesInput!) {
+          allTeamsByLeagues(input: $input) {
             __typename
             size
             data {
@@ -23,7 +23,13 @@ public extension TG {
         """#
       ))
 
-    public init() {}
+    public var input: AllTeamsByLeaguesInput
+
+    public init(input: AllTeamsByLeaguesInput) {
+      self.input = input
+    }
+
+    public var __variables: Variables? { ["input": input] }
 
     public struct Data: TG.SelectionSet {
       public let __data: DataDict
@@ -31,16 +37,16 @@ public extension TG {
 
       public static var __parentType: Apollo.ParentType { TG.Objects.Query }
       public static var __selections: [Apollo.Selection] { [
-        .field("allTeams", AllTeams?.self),
+        .field("allTeamsByLeagues", AllTeamsByLeagues?.self, arguments: ["input": .variable("input")]),
       ] }
 
-      /// Returns a list of all teams.
-      public var allTeams: AllTeams? { __data["allTeams"] }
+      /// Returns a list of teams in a given League.
+      public var allTeamsByLeagues: AllTeamsByLeagues? { __data["allTeamsByLeagues"] }
 
-      /// AllTeams
+      /// AllTeamsByLeagues
       ///
       /// Parent Type: `Teams`
-      public struct AllTeams: TG.SelectionSet {
+      public struct AllTeamsByLeagues: TG.SelectionSet {
         public let __data: DataDict
         public init(_dataDict: DataDict) { __data = _dataDict }
 
@@ -54,7 +60,7 @@ public extension TG {
         public var size: Int? { __data["size"] }
         public var data: [Datum] { __data["data"] }
 
-        /// AllTeams.Datum
+        /// AllTeamsByLeagues.Datum
         ///
         /// Parent Type: `Team`
         public struct Datum: TG.SelectionSet {

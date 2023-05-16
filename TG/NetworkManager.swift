@@ -15,18 +15,20 @@ class NetworManager {
     lazy var client: ApolloClient? = {
         let cache = InMemoryNormalizedCache()
         let store = ApolloStore(cache: cache)
-        let payloads = ["User-Agent":"iOS"]
+        let payloads = ["User-Agent":"iOS 15"] // better implement real user agent
         let urlConfiguration = URLSessionConfiguration.default
         urlConfiguration.httpAdditionalHeaders = payloads // required by topshot API
         
-        let client = URLSessionClient(sessionConfiguration: urlConfiguration, callbackQueue:queue)
-        let provider = DefaultInterceptorProvider(client: client, shouldInvalidateClientOnDeinit: true, store: store)
+        let urlSessionClient = URLSessionClient(sessionConfiguration: urlConfiguration, callbackQueue:queue)
+        let provider = DefaultInterceptorProvider(client: urlSessionClient, shouldInvalidateClientOnDeinit: true, store: store)
         
         let url = URL(string: "https://public-api.nbatopshot.com/graphql")
         
-        // production code need NOT to use force unwrapping
-        let networkTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: url!)
+        if let url {
+            let networkTransport = RequestChainNetworkTransport(interceptorProvider: provider, endpointURL: url)
+            return ApolloClient(networkTransport: networkTransport, store: store)
+        }
         
-        return ApolloClient(networkTransport: networkTransport, store: store)
+        return nil
     }()
 }
