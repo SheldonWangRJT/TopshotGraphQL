@@ -8,12 +8,23 @@
 import UIKit
 import Apollo
 
+enum TabType {
+    case none
+    case nba
+    case wnba
+    case allTeam
+}
+
 class ViewController: UIViewController {
 
+    var type: TabType = .none
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
                 
+        
+        
 //        let query1 = TG.AllTeamsQuery()
         let input = TG.AllTeamsByLeaguesInput(leagues: [GraphQLEnum<TG.League>.case(.nba)])
         let query2 = TG.AllTeamsByLeaguesQuery(input: input)

@@ -8,7 +8,6 @@ target 'TG' do
   # Pods for TG
   pod 'Apollo' 
 
-
   target 'TGTests' do
     inherit! :search_paths
     # Pods for testing
