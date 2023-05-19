@@ -11,7 +11,7 @@ class ALLTeamViewController: ViewController {
 
     override var type: TabType {
         get {
-            .allTeam
+            .all
         }
         set {
             super.type = newValue

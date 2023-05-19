@@ -9,11 +9,11 @@ import UIKit
 import Apollo
 import RxSwift
 
-enum TabType {
+enum TabType : String {
     case none
     case nba
     case wnba
-    case allTeam
+    case all
 }
 
 class ViewController: UIViewController {
@@ -28,14 +28,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if (type == .none) {
+            assertionFailure("make sure type is overriden")
+        }
+        self.title = type.rawValue.capitalized + " Teams"
+        
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
         
-        viewModel.observe(tabType: type).observe(on:MainScheduler()).subscribe { [weak self] teamModels in
-            self?.teamModels = teamModels
-            self?.tableView.reloadData()
-        }.disposed(by: disposableBag)
+        // on purposely delay to show loading indicator for demo purposes
+        DispatchQueue.global().asyncAfter(deadline: .now() + 3) { [weak self] in
+            guard let self else { return }
+            self.viewModel.observe(tabType: self.type).observe(on:MainScheduler()).subscribe { [weak self] teamModels in
+                self?.teamModels = teamModels
+                self?.tableView.reloadData()
+            }.disposed(by: self.disposableBag)
+        }
     }
 }
 
@@ -47,13 +57,17 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let teamMode = teamModels[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VCCell")
-        cell?.textLabel?.text = teamMode.name
-        cell?.detailTextLabel?.text = teamMode.id
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VCCell") as! TableViewCell
+        cell.mainLabel.text = teamMode.name
+        cell.idLabel.text = teamMode.id
+        return cell
     }
 }
 
 extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 }

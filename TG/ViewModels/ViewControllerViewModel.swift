@@ -51,7 +51,7 @@ class ViewControllerViewModel {
                 }
                 subject.onCompleted()
             })
-        case .allTeam:
+        case .all:
             let query = TG.AllTeamsQuery()
             NetworManager.shared.client?.fetch(query: query, resultHandler: { result in
                 switch result {

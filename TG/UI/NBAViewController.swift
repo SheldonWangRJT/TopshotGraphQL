@@ -18,5 +18,4 @@ class NBAViewControll: ViewController {
             super.type = newValue
         }
     }
-    
 }
