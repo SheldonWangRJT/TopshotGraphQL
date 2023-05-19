@@ -7,6 +7,7 @@ target 'TG' do
 
   # Pods for TG
   pod 'Apollo' 
+  pod 'RxSwift' 
 
   target 'TGTests' do
     inherit! :search_paths

@@ -7,6 +7,7 @@
 
 import UIKit
 import Apollo
+import RxSwift
 
 enum TabType {
     case none
@@ -19,28 +20,40 @@ class ViewController: UIViewController {
 
     var type: TabType = .none
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    let viewModel = ViewControllerViewModel()
+    let disposableBag = DisposeBag()
+    var teamModels = [TeamModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-                
+        tableView.dataSource = self
+        tableView.delegate = self
         
-        
-//        let query1 = TG.AllTeamsQuery()
-        let input = TG.AllTeamsByLeaguesInput(leagues: [GraphQLEnum<TG.League>.case(.nba)])
-        let query2 = TG.AllTeamsByLeaguesQuery(input: input)
-        NetworManager.shared.client?.fetch(query: query2, resultHandler: { result in
-            switch result {
-            case .success(let results):
-                let allTeams = results.data?.allTeamsByLeagues
-                let allTeamsData = allTeams?.data.compactMap { $0 }
-                let allTeamsDataNames = allTeamsData?.map { $0.name }.compactMap { $0 } ?? []
-                debugPrint(allTeamsDataNames)
-            case .failure(let error):
-                debugPrint(error)
-            }
-        })
+        viewModel.observe(tabType: type).observe(on:MainScheduler()).subscribe { [weak self] teamModels in
+            self?.teamModels = teamModels
+            self?.tableView.reloadData()
+        }.disposed(by: disposableBag)
     }
-
-    
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        teamModels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let teamMode = teamModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VCCell")
+        cell?.textLabel?.text = teamMode.name
+        cell?.detailTextLabel?.text = teamMode.id
+        return cell!
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    
+}

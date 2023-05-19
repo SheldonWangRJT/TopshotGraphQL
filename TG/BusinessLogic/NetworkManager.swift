@@ -8,6 +8,11 @@
 import Foundation
 import Apollo
 
+struct Team {
+    let id:String
+    let name:String
+}
+
 class NetworManager {
     static let shared = NetworManager()
     
