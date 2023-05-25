@@ -6,7 +6,7 @@ target 'TG' do
   use_frameworks!
 
   # Pods for TG
-  pod 'Apollo' 
+  pod 'Apollo', '~> 1.1.3' 
   pod 'RxSwift' 
 
   target 'TGTests' do

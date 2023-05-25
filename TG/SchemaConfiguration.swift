@@ -8,7 +8,7 @@
 import Apollo
 
 enum SchemaConfiguration: Apollo.SchemaConfiguration {
-    static func cacheKeyInfo(for type: Apollo.Object, object: Apollo.ObjectData) -> Apollo.CacheKeyInfo? {
+    static func cacheKeyInfo(for type: Apollo.Object, object: Apollo.JSONObject) -> Apollo.CacheKeyInfo? {
         return nil
     }
 }
