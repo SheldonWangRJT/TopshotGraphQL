@@ -101,8 +101,16 @@ class SearchMintedMomentsViewControllerViewModel {
             
             switch result {
             case .success(let res):
-                let totalCount = res.data?.searchMintedMoments?.data?.searchSummary?.totalCount
-                debugPrint(totalCount ?? Int.max)
+                let searchSummary = res.data?.searchMintedMoments?.data?.searchSummary
+                let moments:[MomentModel]? = searchSummary?.data?.asMintedMoments?.data.compactMap { mintedMoment -> MomentModel? in
+                    guard let thumbnailPrex = mintedMoment.assetPathPrefix else { return nil }
+                    return MomentModel(playerName: mintedMoment.play?.stats?.playerName,
+                                tier: mintedMoment.tier?.rawValue,
+                                flowSerialNumber: mintedMoment.flowSerialNumber,
+                                thumbnail: thumbnailPrex + "Hero_2880_2880_Black.jpg?quality=60&width=480")
+                }
+                subject.onNext(moments ?? [])
+                
             case .failure(let error):
                 subject.onError(error)
             }

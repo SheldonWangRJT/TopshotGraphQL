@@ -37,3 +37,24 @@ class NetworManager {
         return nil
     }()
 }
+
+
+class ImageDownloader {
+    static let shared = ImageDownloader()
+    
+    func downloadImage(with urlString:String, callback:@escaping (UIImage?)->Void) {
+        guard let url = URL(string: urlString) else {
+            return callback(nil)
+        }
+        let urlReq = URLRequest(url: url)
+        URLSession.shared.dataTask(with: urlReq) { data, response, error in
+            if let data = data {
+                let image = UIImage(data: data)
+                callback(image)
+            } else {
+                callback(nil)
+            }
+        }.resume()
+    }
+    
+}

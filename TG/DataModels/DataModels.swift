@@ -13,7 +13,7 @@ struct TeamModel {
 }
 
 struct MomentModel {
-    let playTitle:String?         //* play.stats.title
+    let playerName:String?         //* play.stats.title
     let tier:String?              //* tier
     let flowSerialNumber:String?  //* flowSerialNumber
     let thumbnail:String?         //* thumbnail

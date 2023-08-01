@@ -18,28 +18,67 @@ import RxSwift
 
 
 class SearchMintedMomentsViewController: UIViewController {
-
+    enum Const {
+        static let CellId = "CollectionViewCell"
+    }
+    
     let viewModel = SearchMintedMomentsViewControllerViewModel()
     let disposableBag = DisposeBag()
+    let cache = [String:UIImage]()
+    var moments = [MomentModel]()
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.observe(userId: "63e0a50d19e02110").subscribe { momentModels in
-            
+        collectionView.dataSource = self
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 100, height: 100)
+        
+        collectionView.collectionViewLayout = layout
+        
+//        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: Const.CellId)
+
+        
+        viewModel.observe(userId: "63e0a50d19e02110")
+            .observe(on: MainScheduler())
+            .subscribe { [weak self] momentModels in
+                self?.moments = momentModels
+                self?.collectionView.reloadData()
         }.disposed(by: disposableBag)
         // Do any additional setup after loading the view.
     }
+}
+
+extension SearchMintedMomentsViewController : UICollectionViewDataSource {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Const.CellId, for: indexPath)
+        
+        let moment = moments[indexPath.item]
+        
+        if let cell = cell as? CollectionViewCell {
+            cell.playerNameLabel.text = moment.playerName
+            
+            ImageDownloader.shared.downloadImage(with: moment.thumbnail) { <#UIImage?#> in
+                DispatchQueue.main.async {
+                    cell.image
+                }
+            }
+            
+        }
+        
+        return cell
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        moments.count
+    }
+    
+}
 
+extension SearchMintedMomentsViewController : UICollectionViewDelegate {
+    
 }

@@ -23,22 +23,19 @@ query SearchMintedMoments($input: SearchMintedMomentsInput!) {
         data {
             searchSummary {
                 totalCount
-                data {
-                    data {
-                        size
-                        data {
+                data { ... on MintedMoments {
+                    data { ... on MintedMoment {
+                            tier
                             play {
                                 stats {
                                     playerName
                                 }
                             }
-                            tier
                             flowSerialNumber
                             assetPathPrefix
-                        }
-                    }
+                    }}
                     size
-                }
+                }}
             }
         }
     }

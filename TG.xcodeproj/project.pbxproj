@@ -40,6 +40,47 @@
 		6B3993C82A798A81002A8093 /* AllTeamsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993C52A798A81002A8093 /* AllTeamsQuery.graphql.swift */; };
 		6B3993C92A798A81002A8093 /* AllTeamsByLeaguesQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993C62A798A81002A8093 /* AllTeamsByLeaguesQuery.graphql.swift */; };
 		6B3993CD2A798B58002A8093 /* SearchMintedMomentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993CC2A798B58002A8093 /* SearchMintedMomentsViewController.swift */; };
+		6B3993D12A7999C2002A8093 /* Sortable.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993CE2A7999C2002A8093 /* Sortable.graphql.swift */; };
+		6B3993D22A7999C2002A8093 /* Syncable.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993CF2A7999C2002A8093 /* Syncable.graphql.swift */; };
+		6B3993D32A7999C2002A8093 /* SortableCollection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D02A7999C2002A8093 /* SortableCollection.graphql.swift */; };
+		6B3993F92A7999DE002A8093 /* PacksForUserCollection.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D42A7999DD002A8093 /* PacksForUserCollection.graphql.swift */; };
+		6B3993FA2A7999DE002A8093 /* MarketplaceTransactions.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D52A7999DD002A8093 /* MarketplaceTransactions.graphql.swift */; };
+		6B3993FB2A7999DE002A8093 /* Offer.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D62A7999DD002A8093 /* Offer.graphql.swift */; };
+		6B3993FC2A7999DE002A8093 /* Pack.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D72A7999DD002A8093 /* Pack.graphql.swift */; };
+		6B3993FD2A7999DE002A8093 /* Showcase.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D82A7999DD002A8093 /* Showcase.graphql.swift */; };
+		6B3993FE2A7999DE002A8093 /* Plays.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993D92A7999DD002A8093 /* Plays.graphql.swift */; };
+		6B3993FF2A7999DE002A8093 /* UserChallenges.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DA2A7999DD002A8093 /* UserChallenges.graphql.swift */; };
+		6B3994002A7999DE002A8093 /* PackListings.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DB2A7999DD002A8093 /* PackListings.graphql.swift */; };
+		6B3994012A7999DE002A8093 /* Users.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DC2A7999DD002A8093 /* Users.graphql.swift */; };
+		6B3994022A7999DE002A8093 /* WatchedEditions.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DD2A7999DD002A8093 /* WatchedEditions.graphql.swift */; };
+		6B3994032A7999DE002A8093 /* OnChainPack.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DE2A7999DD002A8093 /* OnChainPack.graphql.swift */; };
+		6B3994042A7999DE002A8093 /* Showcases.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993DF2A7999DD002A8093 /* Showcases.graphql.swift */; };
+		6B3994052A7999DE002A8093 /* EditionListing.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E02A7999DD002A8093 /* EditionListing.graphql.swift */; };
+		6B3994062A7999DE002A8093 /* Offers.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E12A7999DD002A8093 /* Offers.graphql.swift */; };
+		6B3994072A7999DE002A8093 /* MintedMoments.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E22A7999DD002A8093 /* MintedMoments.graphql.swift */; };
+		6B3994082A7999DE002A8093 /* EditionListings.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E32A7999DD002A8093 /* EditionListings.graphql.swift */; };
+		6B3994092A7999DE002A8093 /* UserSetAssociations.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E42A7999DD002A8093 /* UserSetAssociations.graphql.swift */; };
+		6B39940A2A7999DE002A8093 /* UserSetAssociation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E52A7999DD002A8093 /* UserSetAssociation.graphql.swift */; };
+		6B39940B2A7999DE002A8093 /* MomentListing.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E62A7999DD002A8093 /* MomentListing.graphql.swift */; };
+		6B39940C2A7999DE002A8093 /* Editions.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E72A7999DD002A8093 /* Editions.graphql.swift */; };
+		6B39940D2A7999DE002A8093 /* Sets.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E82A7999DE002A8093 /* Sets.graphql.swift */; };
+		6B39940E2A7999DE002A8093 /* MomentGroups.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993E92A7999DE002A8093 /* MomentGroups.graphql.swift */; };
+		6B39940F2A7999DE002A8093 /* PackListing.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993EA2A7999DE002A8093 /* PackListing.graphql.swift */; };
+		6B3994102A7999DE002A8093 /* Activities.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993EB2A7999DE002A8093 /* Activities.graphql.swift */; };
+		6B3994112A7999DE002A8093 /* MomentListings.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993EC2A7999DE002A8093 /* MomentListings.graphql.swift */; };
+		6B3994122A7999DE002A8093 /* Set.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993ED2A7999DE002A8093 /* Set.graphql.swift */; };
+		6B3994132A7999DE002A8093 /* PacksForUserCollections.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993EE2A7999DE002A8093 /* PacksForUserCollections.graphql.swift */; };
+		6B3994142A7999DE002A8093 /* Play.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993EF2A7999DE002A8093 /* Play.graphql.swift */; };
+		6B3994152A7999DE002A8093 /* MintedMoment.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F02A7999DE002A8093 /* MintedMoment.graphql.swift */; };
+		6B3994162A7999DE002A8093 /* User.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F12A7999DE002A8093 /* User.graphql.swift */; };
+		6B3994172A7999DE002A8093 /* WatchedEdition.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F22A7999DE002A8093 /* WatchedEdition.graphql.swift */; };
+		6B3994182A7999DE002A8093 /* MomentGroup.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F32A7999DE002A8093 /* MomentGroup.graphql.swift */; };
+		6B3994192A7999DE002A8093 /* MarketplaceTransaction.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F42A7999DE002A8093 /* MarketplaceTransaction.graphql.swift */; };
+		6B39941A2A7999DE002A8093 /* Activity.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F52A7999DE002A8093 /* Activity.graphql.swift */; };
+		6B39941B2A7999DE002A8093 /* PlayStats.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F62A7999DE002A8093 /* PlayStats.graphql.swift */; };
+		6B39941C2A7999DE002A8093 /* Edition.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F72A7999DE002A8093 /* Edition.graphql.swift */; };
+		6B39941D2A7999DE002A8093 /* UserChallenge.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3993F82A7999DE002A8093 /* UserChallenge.graphql.swift */; };
+		6B39941F2A799D1E002A8093 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B39941E2A799D1E002A8093 /* CollectionViewCell.swift */; };
 		6B6C06DF2A11E50A008C12D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C06DE2A11E50A008C12D5 /* AppDelegate.swift */; };
 		6B6C06E12A11E50A008C12D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C06E02A11E50A008C12D5 /* SceneDelegate.swift */; };
 		6B6C06E32A11E50A008C12D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C06E22A11E50A008C12D5 /* ViewController.swift */; };
@@ -118,6 +159,47 @@
 		6B3993C52A798A81002A8093 /* AllTeamsQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllTeamsQuery.graphql.swift; path = Operations/Queries/AllTeamsQuery.graphql.swift; sourceTree = "<group>"; };
 		6B3993C62A798A81002A8093 /* AllTeamsByLeaguesQuery.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AllTeamsByLeaguesQuery.graphql.swift; path = Operations/Queries/AllTeamsByLeaguesQuery.graphql.swift; sourceTree = "<group>"; };
 		6B3993CC2A798B58002A8093 /* SearchMintedMomentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMintedMomentsViewController.swift; sourceTree = "<group>"; };
+		6B3993CE2A7999C2002A8093 /* Sortable.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sortable.graphql.swift; path = Schema/Interfaces/Sortable.graphql.swift; sourceTree = "<group>"; };
+		6B3993CF2A7999C2002A8093 /* Syncable.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Syncable.graphql.swift; path = Schema/Interfaces/Syncable.graphql.swift; sourceTree = "<group>"; };
+		6B3993D02A7999C2002A8093 /* SortableCollection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortableCollection.graphql.swift; path = Schema/Interfaces/SortableCollection.graphql.swift; sourceTree = "<group>"; };
+		6B3993D42A7999DD002A8093 /* PacksForUserCollection.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacksForUserCollection.graphql.swift; path = Schema/Objects/PacksForUserCollection.graphql.swift; sourceTree = "<group>"; };
+		6B3993D52A7999DD002A8093 /* MarketplaceTransactions.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketplaceTransactions.graphql.swift; path = Schema/Objects/MarketplaceTransactions.graphql.swift; sourceTree = "<group>"; };
+		6B3993D62A7999DD002A8093 /* Offer.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.graphql.swift; path = Schema/Objects/Offer.graphql.swift; sourceTree = "<group>"; };
+		6B3993D72A7999DD002A8093 /* Pack.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pack.graphql.swift; path = Schema/Objects/Pack.graphql.swift; sourceTree = "<group>"; };
+		6B3993D82A7999DD002A8093 /* Showcase.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Showcase.graphql.swift; path = Schema/Objects/Showcase.graphql.swift; sourceTree = "<group>"; };
+		6B3993D92A7999DD002A8093 /* Plays.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plays.graphql.swift; path = Schema/Objects/Plays.graphql.swift; sourceTree = "<group>"; };
+		6B3993DA2A7999DD002A8093 /* UserChallenges.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserChallenges.graphql.swift; path = Schema/Objects/UserChallenges.graphql.swift; sourceTree = "<group>"; };
+		6B3993DB2A7999DD002A8093 /* PackListings.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PackListings.graphql.swift; path = Schema/Objects/PackListings.graphql.swift; sourceTree = "<group>"; };
+		6B3993DC2A7999DD002A8093 /* Users.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Users.graphql.swift; path = Schema/Objects/Users.graphql.swift; sourceTree = "<group>"; };
+		6B3993DD2A7999DD002A8093 /* WatchedEditions.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchedEditions.graphql.swift; path = Schema/Objects/WatchedEditions.graphql.swift; sourceTree = "<group>"; };
+		6B3993DE2A7999DD002A8093 /* OnChainPack.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnChainPack.graphql.swift; path = Schema/Objects/OnChainPack.graphql.swift; sourceTree = "<group>"; };
+		6B3993DF2A7999DD002A8093 /* Showcases.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Showcases.graphql.swift; path = Schema/Objects/Showcases.graphql.swift; sourceTree = "<group>"; };
+		6B3993E02A7999DD002A8093 /* EditionListing.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditionListing.graphql.swift; path = Schema/Objects/EditionListing.graphql.swift; sourceTree = "<group>"; };
+		6B3993E12A7999DD002A8093 /* Offers.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offers.graphql.swift; path = Schema/Objects/Offers.graphql.swift; sourceTree = "<group>"; };
+		6B3993E22A7999DD002A8093 /* MintedMoments.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MintedMoments.graphql.swift; path = Schema/Objects/MintedMoments.graphql.swift; sourceTree = "<group>"; };
+		6B3993E32A7999DD002A8093 /* EditionListings.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditionListings.graphql.swift; path = Schema/Objects/EditionListings.graphql.swift; sourceTree = "<group>"; };
+		6B3993E42A7999DD002A8093 /* UserSetAssociations.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSetAssociations.graphql.swift; path = Schema/Objects/UserSetAssociations.graphql.swift; sourceTree = "<group>"; };
+		6B3993E52A7999DD002A8093 /* UserSetAssociation.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSetAssociation.graphql.swift; path = Schema/Objects/UserSetAssociation.graphql.swift; sourceTree = "<group>"; };
+		6B3993E62A7999DD002A8093 /* MomentListing.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MomentListing.graphql.swift; path = Schema/Objects/MomentListing.graphql.swift; sourceTree = "<group>"; };
+		6B3993E72A7999DD002A8093 /* Editions.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Editions.graphql.swift; path = Schema/Objects/Editions.graphql.swift; sourceTree = "<group>"; };
+		6B3993E82A7999DE002A8093 /* Sets.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sets.graphql.swift; path = Schema/Objects/Sets.graphql.swift; sourceTree = "<group>"; };
+		6B3993E92A7999DE002A8093 /* MomentGroups.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MomentGroups.graphql.swift; path = Schema/Objects/MomentGroups.graphql.swift; sourceTree = "<group>"; };
+		6B3993EA2A7999DE002A8093 /* PackListing.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PackListing.graphql.swift; path = Schema/Objects/PackListing.graphql.swift; sourceTree = "<group>"; };
+		6B3993EB2A7999DE002A8093 /* Activities.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activities.graphql.swift; path = Schema/Objects/Activities.graphql.swift; sourceTree = "<group>"; };
+		6B3993EC2A7999DE002A8093 /* MomentListings.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MomentListings.graphql.swift; path = Schema/Objects/MomentListings.graphql.swift; sourceTree = "<group>"; };
+		6B3993ED2A7999DE002A8093 /* Set.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set.graphql.swift; path = Schema/Objects/Set.graphql.swift; sourceTree = "<group>"; };
+		6B3993EE2A7999DE002A8093 /* PacksForUserCollections.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacksForUserCollections.graphql.swift; path = Schema/Objects/PacksForUserCollections.graphql.swift; sourceTree = "<group>"; };
+		6B3993EF2A7999DE002A8093 /* Play.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Play.graphql.swift; path = Schema/Objects/Play.graphql.swift; sourceTree = "<group>"; };
+		6B3993F02A7999DE002A8093 /* MintedMoment.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MintedMoment.graphql.swift; path = Schema/Objects/MintedMoment.graphql.swift; sourceTree = "<group>"; };
+		6B3993F12A7999DE002A8093 /* User.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.graphql.swift; path = Schema/Objects/User.graphql.swift; sourceTree = "<group>"; };
+		6B3993F22A7999DE002A8093 /* WatchedEdition.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchedEdition.graphql.swift; path = Schema/Objects/WatchedEdition.graphql.swift; sourceTree = "<group>"; };
+		6B3993F32A7999DE002A8093 /* MomentGroup.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MomentGroup.graphql.swift; path = Schema/Objects/MomentGroup.graphql.swift; sourceTree = "<group>"; };
+		6B3993F42A7999DE002A8093 /* MarketplaceTransaction.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketplaceTransaction.graphql.swift; path = Schema/Objects/MarketplaceTransaction.graphql.swift; sourceTree = "<group>"; };
+		6B3993F52A7999DE002A8093 /* Activity.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Activity.graphql.swift; path = Schema/Objects/Activity.graphql.swift; sourceTree = "<group>"; };
+		6B3993F62A7999DE002A8093 /* PlayStats.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayStats.graphql.swift; path = Schema/Objects/PlayStats.graphql.swift; sourceTree = "<group>"; };
+		6B3993F72A7999DE002A8093 /* Edition.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Edition.graphql.swift; path = Schema/Objects/Edition.graphql.swift; sourceTree = "<group>"; };
+		6B3993F82A7999DE002A8093 /* UserChallenge.graphql.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserChallenge.graphql.swift; path = Schema/Objects/UserChallenge.graphql.swift; sourceTree = "<group>"; };
+		6B39941E2A799D1E002A8093 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6B6C06DB2A11E50A008C12D5 /* TG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6C06DE2A11E50A008C12D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B6C06E02A11E50A008C12D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +375,46 @@
 		6B6C07582A17C045008C12D5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6B3993CE2A7999C2002A8093 /* Sortable.graphql.swift */,
+				6B3993EB2A7999DE002A8093 /* Activities.graphql.swift */,
+				6B3993F52A7999DE002A8093 /* Activity.graphql.swift */,
+				6B3993F72A7999DE002A8093 /* Edition.graphql.swift */,
+				6B3993E02A7999DD002A8093 /* EditionListing.graphql.swift */,
+				6B3993E32A7999DD002A8093 /* EditionListings.graphql.swift */,
+				6B3993E72A7999DD002A8093 /* Editions.graphql.swift */,
+				6B3993F42A7999DE002A8093 /* MarketplaceTransaction.graphql.swift */,
+				6B3993D52A7999DD002A8093 /* MarketplaceTransactions.graphql.swift */,
+				6B3993F02A7999DE002A8093 /* MintedMoment.graphql.swift */,
+				6B3993E22A7999DD002A8093 /* MintedMoments.graphql.swift */,
+				6B3993F32A7999DE002A8093 /* MomentGroup.graphql.swift */,
+				6B3993E92A7999DE002A8093 /* MomentGroups.graphql.swift */,
+				6B3993E62A7999DD002A8093 /* MomentListing.graphql.swift */,
+				6B3993EC2A7999DE002A8093 /* MomentListings.graphql.swift */,
+				6B3993D62A7999DD002A8093 /* Offer.graphql.swift */,
+				6B3993E12A7999DD002A8093 /* Offers.graphql.swift */,
+				6B3993DE2A7999DD002A8093 /* OnChainPack.graphql.swift */,
+				6B3993D72A7999DD002A8093 /* Pack.graphql.swift */,
+				6B3993EA2A7999DE002A8093 /* PackListing.graphql.swift */,
+				6B3993DB2A7999DD002A8093 /* PackListings.graphql.swift */,
+				6B3993D42A7999DD002A8093 /* PacksForUserCollection.graphql.swift */,
+				6B3993EE2A7999DE002A8093 /* PacksForUserCollections.graphql.swift */,
+				6B3993EF2A7999DE002A8093 /* Play.graphql.swift */,
+				6B3993D92A7999DD002A8093 /* Plays.graphql.swift */,
+				6B3993F62A7999DE002A8093 /* PlayStats.graphql.swift */,
+				6B3993ED2A7999DE002A8093 /* Set.graphql.swift */,
+				6B3993E82A7999DE002A8093 /* Sets.graphql.swift */,
+				6B3993D82A7999DD002A8093 /* Showcase.graphql.swift */,
+				6B3993DF2A7999DD002A8093 /* Showcases.graphql.swift */,
+				6B3993F12A7999DE002A8093 /* User.graphql.swift */,
+				6B3993F82A7999DE002A8093 /* UserChallenge.graphql.swift */,
+				6B3993DA2A7999DD002A8093 /* UserChallenges.graphql.swift */,
+				6B3993DC2A7999DD002A8093 /* Users.graphql.swift */,
+				6B3993E52A7999DD002A8093 /* UserSetAssociation.graphql.swift */,
+				6B3993E42A7999DD002A8093 /* UserSetAssociations.graphql.swift */,
+				6B3993F22A7999DE002A8093 /* WatchedEdition.graphql.swift */,
+				6B3993DD2A7999DD002A8093 /* WatchedEditions.graphql.swift */,
+				6B3993D02A7999C2002A8093 /* SortableCollection.graphql.swift */,
+				6B3993CF2A7999C2002A8093 /* Syncable.graphql.swift */,
 				6B3993BD2A798A12002A8093 /* Cursor.swift */,
 				6B3993C22A798A50002A8093 /* SchemaMetadata.graphql.swift */,
 				6B3993C62A798A81002A8093 /* AllTeamsByLeaguesQuery.graphql.swift */,
@@ -336,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				6B6C075A2A17D40A008C12D5 /* TableViewCell.swift */,
+				6B39941E2A799D1E002A8093 /* CollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -603,49 +726,90 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3994032A7999DE002A8093 /* OnChainPack.graphql.swift in Sources */,
 				6B3993A62A7989FA002A8093 /* DateRangeFilterInput.graphql.swift in Sources */,
+				6B39941C2A7999DE002A8093 /* Edition.graphql.swift in Sources */,
 				6B6C07132A11E8B6008C12D5 /* Queries.graphql in Sources */,
 				6B6C06E32A11E50A008C12D5 /* ViewController.swift in Sources */,
 				6B3993972A7989ED002A8093 /* SearchMintedMomentsResponse.graphql.swift in Sources */,
 				6B6C06DF2A11E50A008C12D5 /* AppDelegate.swift in Sources */,
 				6B3993C02A798A12002A8093 /* Cursor.swift in Sources */,
 				6B3993C92A798A81002A8093 /* AllTeamsByLeaguesQuery.graphql.swift in Sources */,
+				6B39941D2A7999DE002A8093 /* UserChallenge.graphql.swift in Sources */,
 				6B6C074E2A1705F8008C12D5 /* WNBAViewController.swift in Sources */,
+				6B3994022A7999DE002A8093 /* WatchedEditions.graphql.swift in Sources */,
+				6B3993FC2A7999DE002A8093 /* Pack.graphql.swift in Sources */,
+				6B39940A2A7999DE002A8093 /* UserSetAssociation.graphql.swift in Sources */,
+				6B3994012A7999DE002A8093 /* Users.graphql.swift in Sources */,
 				6B3993BF2A798A12002A8093 /* Time.swift in Sources */,
+				6B3993D12A7999C2002A8093 /* Sortable.graphql.swift in Sources */,
+				6B3994092A7999DE002A8093 /* UserSetAssociations.graphql.swift in Sources */,
 				6B3993C12A798A12002A8093 /* Price.swift in Sources */,
 				6B3993A72A7989FA002A8093 /* MintedMomentFilterInput.graphql.swift in Sources */,
+				6B39940F2A7999DE002A8093 /* PackListing.graphql.swift in Sources */,
 				6B3993B62A798A06002A8093 /* MomentTier.graphql.swift in Sources */,
+				6B3993FB2A7999DE002A8093 /* Offer.graphql.swift in Sources */,
 				6B6C07532A170ABF008C12D5 /* ViewControllerViewModel.swift in Sources */,
+				6B39940D2A7999DE002A8093 /* Sets.graphql.swift in Sources */,
 				6B3993942A7989ED002A8093 /* Query.graphql.swift in Sources */,
+				6B3993FA2A7999DE002A8093 /* MarketplaceTransactions.graphql.swift in Sources */,
+				6B3994192A7999DE002A8093 /* MarketplaceTransaction.graphql.swift in Sources */,
 				6B3993B52A798A06002A8093 /* LockStatusFilter.graphql.swift in Sources */,
 				6B6C07372A12E591008C12D5 /* NetworkManager.swift in Sources */,
+				6B3994072A7999DE002A8093 /* MintedMoments.graphql.swift in Sources */,
+				6B3994132A7999DE002A8093 /* PacksForUserCollections.graphql.swift in Sources */,
 				6B6C07502A170617008C12D5 /* ALLTeamViewController.swift in Sources */,
 				6B3993C32A798A50002A8093 /* SchemaMetadata.graphql.swift in Sources */,
 				6B3993932A7989ED002A8093 /* SearchSummary.graphql.swift in Sources */,
+				6B3993F92A7999DE002A8093 /* PacksForUserCollection.graphql.swift in Sources */,
 				6B3993A32A7989FA002A8093 /* IntegerRangeFilterInput.graphql.swift in Sources */,
+				6B3993FD2A7999DE002A8093 /* Showcase.graphql.swift in Sources */,
+				6B3994182A7999DE002A8093 /* MomentGroup.graphql.swift in Sources */,
 				6B3993AA2A7989FA002A8093 /* PaginationInput.graphql.swift in Sources */,
 				6B3993952A7989ED002A8093 /* Team.graphql.swift in Sources */,
+				6B3994152A7999DE002A8093 /* MintedMoment.graphql.swift in Sources */,
+				6B3994122A7999DE002A8093 /* Set.graphql.swift in Sources */,
 				6B6C07242A1201E6008C12D5 /* TG.graphql.swift in Sources */,
+				6B3994142A7999DE002A8093 /* Play.graphql.swift in Sources */,
 				6B6C075B2A17D40A008C12D5 /* TableViewCell.swift in Sources */,
 				6B3993C72A798A81002A8093 /* SearchMintedMomentsQuery.graphql.swift in Sources */,
+				6B39941F2A799D1E002A8093 /* CollectionViewCell.swift in Sources */,
 				6B3993A82A7989FA002A8093 /* PlayerGameScoresFiltersInput.graphql.swift in Sources */,
 				6B3993A22A7989FA002A8093 /* AllTeamsByLeaguesInput.graphql.swift in Sources */,
 				6B3993BB2A798A06002A8093 /* League.graphql.swift in Sources */,
 				6B3993B92A798A06002A8093 /* ForSaleFilter.graphql.swift in Sources */,
+				6B3994062A7999DE002A8093 /* Offers.graphql.swift in Sources */,
+				6B3994102A7999DE002A8093 /* Activities.graphql.swift in Sources */,
+				6B3994112A7999DE002A8093 /* MomentListings.graphql.swift in Sources */,
+				6B39941B2A7999DE002A8093 /* PlayStats.graphql.swift in Sources */,
 				6B3993C82A798A81002A8093 /* AllTeamsQuery.graphql.swift in Sources */,
+				6B3993D22A7999C2002A8093 /* Syncable.graphql.swift in Sources */,
 				6B6C06E92A11E50A008C12D5 /* TG.xcdatamodeld in Sources */,
 				6B3993A52A7989FA002A8093 /* SearchMintedMomentsInput.graphql.swift in Sources */,
 				6B3993CD2A798B58002A8093 /* SearchMintedMomentsViewController.swift in Sources */,
 				6B6C07572A170EB9008C12D5 /* DataModels.swift in Sources */,
+				6B3994082A7999DE002A8093 /* EditionListings.graphql.swift in Sources */,
+				6B39940B2A7999DE002A8093 /* MomentListing.graphql.swift in Sources */,
 				6B6C074C2A1705BC008C12D5 /* NBAViewController.swift in Sources */,
+				6B3993D32A7999C2002A8093 /* SortableCollection.graphql.swift in Sources */,
+				6B39940C2A7999DE002A8093 /* Editions.graphql.swift in Sources */,
+				6B3994002A7999DE002A8093 /* PackListings.graphql.swift in Sources */,
 				6B3993A92A7989FA002A8093 /* EditionsFilterInput.graphql.swift in Sources */,
 				6B3993962A7989ED002A8093 /* MintedMomentSearchSummary.graphql.swift in Sources */,
+				6B3994172A7999DE002A8093 /* WatchedEdition.graphql.swift in Sources */,
+				6B39941A2A7999DE002A8093 /* Activity.graphql.swift in Sources */,
 				6B6C06E12A11E50A008C12D5 /* SceneDelegate.swift in Sources */,
+				6B3994052A7999DE002A8093 /* EditionListing.graphql.swift in Sources */,
 				6B3993B42A798A06002A8093 /* MintedMomentSortType.graphql.swift in Sources */,
 				6B3993BA2A798A06002A8093 /* PlayerPosition.graphql.swift in Sources */,
 				6B6C075D2A1FC9D6008C12D5 /* SchemaConfiguration.swift in Sources */,
+				6B3993FF2A7999DE002A8093 /* UserChallenges.graphql.swift in Sources */,
+				6B39940E2A7999DE002A8093 /* MomentGroups.graphql.swift in Sources */,
 				6B3993AB2A7989FA002A8093 /* PriceRangeFilterInput.graphql.swift in Sources */,
+				6B3994162A7999DE002A8093 /* User.graphql.swift in Sources */,
+				6B3994042A7999DE002A8093 /* Showcases.graphql.swift in Sources */,
 				6B3993A42A7989FA002A8093 /* BaseSearchInput.graphql.swift in Sources */,
+				6B3993FE2A7999DE002A8093 /* Plays.graphql.swift in Sources */,
 				6B3993922A7989ED002A8093 /* Teams.graphql.swift in Sources */,
 				6B3993B82A798A06002A8093 /* CursorDirection.graphql.swift in Sources */,
 				6B3993B72A798A06002A8093 /* VisualIdType.graphql.swift in Sources */,
