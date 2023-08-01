@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import OSLog
 
 class ViewControllerViewModel {
     
@@ -68,6 +69,46 @@ class ViewControllerViewModel {
                 subject.onCompleted()
             })
         }
+        
+        return subject.asSingle()
+    }
+}
+
+class SearchMintedMomentsViewControllerViewModel {
+        
+    enum SearchMintedMomentsError: Error {
+        case emptyUserId
+    }
+     
+    func observe(userId:String) -> Single<[MomentModel]> {
+        
+        let subject = PublishSubject<[MomentModel]>()
+        guard !userId.isEmpty else {
+            subject.onError(SearchMintedMomentsError.emptyUserId)
+            subject.onCompleted()
+            return subject.asSingle()
+        }
+
+        let filtersInput = GraphQLNullable.some(TG.MintedMomentFilterInput(byOwnerFlowAddress:[userId]))
+        let cursor = TG.Cursor()
+        let direction = GraphQLEnum<TG.CursorDirection>.case(.right)
+        let paginationInput = TG.PaginationInput(cursor: cursor, direction: direction, limit: 24)
+        let searchInput = TG.BaseSearchInput(pagination: paginationInput)
+        let input = TG.SearchMintedMomentsInput(filters: filtersInput, searchInput: searchInput)
+        
+        let query = TG.SearchMintedMomentsQuery(input: input)
+        NetworManager.shared.client?.fetch(query: query, resultHandler: { result in
+            
+            switch result {
+            case .success(let res):
+                let totalCount = res.data?.searchMintedMoments?.data?.searchSummary?.totalCount
+                debugPrint(totalCount ?? Int.max)
+            case .failure(let error):
+                subject.onError(error)
+            }
+            subject.onCompleted()
+        })
+        
         
         return subject.asSingle()
     }

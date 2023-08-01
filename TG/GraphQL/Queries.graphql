@@ -17,3 +17,29 @@ query AllTeamsByLeagues($input: AllTeamsByLeaguesInput!) {
         }
     }
 }
+
+query SearchMintedMoments($input: SearchMintedMomentsInput!) {
+    searchMintedMoments(input: $input) {
+        data {
+            searchSummary {
+                totalCount
+                data {
+                    data {
+                        size
+                        data {
+                            play {
+                                stats {
+                                    playerName
+                                }
+                            }
+                            tier
+                            flowSerialNumber
+                            assetPathPrefix
+                        }
+                    }
+                    size
+                }
+            }
+        }
+    }
+}

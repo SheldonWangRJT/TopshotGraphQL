@@ -34,6 +34,9 @@ public extension TG {
       case "Query": return TG.Objects.Query
       case "Teams": return TG.Objects.Teams
       case "Team": return TG.Objects.Team
+      case "SearchMintedMomentsResponse": return TG.Objects.SearchMintedMomentsResponse
+      case "MintedMomentSearchSummary": return TG.Objects.MintedMomentSearchSummary
+      case "SearchSummary": return TG.Objects.SearchSummary
       default: return nil
       }
     }
